@@ -22,6 +22,7 @@ type ZipCodeLocation struct {
 	ZipCode   string
 	PlaceName string
 	AdminName string
+	State     string
 	Lat       float64
 	Lon       float64
 }
@@ -188,6 +189,7 @@ func LoadDataset(datasetPath string) (Zipcodes, error) {
 			ZipCode:   splittedLine[1],
 			PlaceName: splittedLine[2],
 			AdminName: splittedLine[3],
+			State:     splittedLine[4],
 			Lat:       lat,
 			Lon:       lon,
 		}
